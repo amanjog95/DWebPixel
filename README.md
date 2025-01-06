@@ -66,3 +66,14 @@ Icons and Logos shown in job post card as already provided. Use Icon component t
 **Admin Email**: admin@example.com | **Admin Password**: password
 
 **User Email**: user@example.com | **User Password**: password
+
+Project Notes : 
+1. Take clone from this repo.
+2. composer install
+3. npm install
+4. npm run dev
+5. php artisan serve
+6. php artisan migrate
+7. php artisan db:seed
+8. If image/logo is not available please run this command - php artisan storage:link
+
