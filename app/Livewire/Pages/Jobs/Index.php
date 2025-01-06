@@ -3,7 +3,7 @@
 namespace App\Livewire\Pages\Jobs;
 
 use Livewire\Component;
-use App\Models\Job;
+use App\Models\JobDetails;
 
 class Index extends Component
 {
@@ -12,17 +12,17 @@ class Index extends Component
     public function mount()
     {
 
-        $this->jobs = Job::all();
+        $this->jobs = JobDetails::all();
 
     }
 
     public function deleteJob($id)
     {
-        $job = Job::find($id);
+        $job = JobDetails::find($id);
     
         if ($job) {
             $job->delete();
-            $this->jobs = Job::all(); // Refresh the jobs list
+            $this->jobs = JobDetails::all(); // Refresh the jobs list
             session()->flash('message', 'Job deleted successfully.');
         } else {
             session()->flash('error', 'Job not found.');

@@ -2,7 +2,7 @@
 namespace App\Livewire\Pages\Jobs;
 
 use Livewire\Component;
-use App\Models\Job;
+use App\Models\JobDetails;
 use Livewire\WithFileUploads;
 use App\Models\Skill;
 
@@ -41,7 +41,7 @@ class Create extends Component
         }
 
         // Create the new job
-        Job::create([
+        JobDetails::create([
             'title' => $this->title,
             'description' => $this->description,
             'company_name' => $this->company_name,
